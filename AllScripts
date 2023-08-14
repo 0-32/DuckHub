@@ -38,16 +38,16 @@ local Window = Rayfield:CreateWindow({
    	}})
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-local Tab0 = Window:CreateTab("AFS", 6034848748)
+local Game = Window:CreateTab("AFS", 6034848748)
 
-local Section0 = Tab0:CreateSection("Script Hubs")
-	local Button = Tab0:CreateButton({
+local Section0 = Game:CreateSection("Script Hubs")
+	local Button = Game:CreateButton({
    		Name = "Platnium Hub | drazox1732",
    		Callback = function()
    			loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Loader/main/PlatiniumLoader"))()		
    		end,
 	})
-	local Button = Tab0:CreateButton({
+	local Button = Game:CreateButton({
    		Name = "Yuto Hub | yuteaz",
    		Callback = function()
    			loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/main/afss"))()
@@ -55,21 +55,21 @@ local Section0 = Tab0:CreateSection("Script Hubs")
    			game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("ScreenGui"):WaitForChild("Frame"):WaitForChild("ImageLabel"):WaitForChild("ImageLabel"):WaitForChild("type key"):WaitForChild("TextBox").Text = getgenv().YHK
    		end,
 	})
-	local Button = Tab0:CreateButton({
+	local Button = Game:CreateButton({
    		Name = "Sky Hub | skyloland",
    		Callback = function()
    			loadstring(game:HttpGet('https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua'))();
    		end,
 	})
 		
-local Section1 = Tab0:CreateSection("Dupe Scripts")
-	local Button = Tab0:CreateButton({
+local Section1 = Game:CreateSection("Dupe Scripts")
+	local Button = Game:CreateButton({
    		Name = "Badware | collorem",
    		Callback = function()
    			loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Dupe/AFSim", true))()
    		end,
 	})
-	local Button = Tab0:CreateButton({
+	local Button = Game:CreateButton({
    		Name = "Scriptagens | solex",
    		Callback = function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/solexz/rbx-scripts/main/solexafs.lua"))()	
@@ -80,9 +80,9 @@ local Section1 = Tab0:CreateSection("Dupe Scripts")
 ------------------------------------------
 
 
-local Tab1 = Window:CreateTab("Auto Execute", 6034509993)
-local Section00 = Tab1:CreateSection("Auto Execute Toggles - *Will re-execute script when toggled on")
-	local Toggle00 = Tab1:CreateToggle({
+local AutoE = Window:CreateTab("Auto Execute", 6034509993)
+local Section00 = AutoE1:CreateSection("Auto Execute Toggles - *Will re-execute script when toggled on")
+	local Toggle00 = AutoE:CreateToggle({
 		Name = "Yuto Hub | yuteaz",
 		CurrentValue = false,
 		Flag = "Toggle00", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -94,7 +94,7 @@ local Section00 = Tab1:CreateSection("Auto Execute Toggles - *Will re-execute sc
 			end
 		end,
 	})
-	local Toggle01 = Tab1:CreateToggle({
+	local Toggle01 = AutoE:CreateToggle({
 		Name = "Sky Hub | skyloland",
 		CurrentValue = false,
 		Flag = "Toggle01",
@@ -104,7 +104,7 @@ local Section00 = Tab1:CreateSection("Auto Execute Toggles - *Will re-execute sc
 			end
 		end,
 	})
-	local Toggle02 = Tab1:CreateToggle({
+	local Toggle02 = AutoE:CreateToggle({
 		Name = "Platinum Hub | drazox1732",
 		CurrentValue = false,
 		Flag = "Toggle02",
@@ -115,8 +115,8 @@ local Section00 = Tab1:CreateSection("Auto Execute Toggles - *Will re-execute sc
 		end,
 	})
 
-local Section01 = Tab1:CreateSection("Dupe Scripts - Auto Execute")
-	local Toggle03 = Tab1:CreateToggle({
+local Section01 = AutoE:CreateSection("Dupe Scripts - Auto Execute")
+	local Toggle03 = AutoE:CreateToggle({
 		Name = "Badware | collorem",
 		CurrentValue = false,
 		Flag = "Toggle03",
@@ -126,7 +126,7 @@ local Section01 = Tab1:CreateSection("Dupe Scripts - Auto Execute")
 			end
 		end,
 	})
-	local Toggle04 = Tab1:CreateToggle({
+	local Toggle04 = AutoE:CreateToggle({
 		Name = "Scriptagens | solex",
 		CurrentValue = false,
 		Flag = "Toggle04",
@@ -137,23 +137,23 @@ local Section01 = Tab1:CreateSection("Dupe Scripts - Auto Execute")
 		end,
 	})
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-local Tab2 = Window:CreateTab("Misc", 6034509993)
-local Section001 = Tab2:CreateSection("Misc")
-	local Button = Tab2:CreateButton({
+local Misc = Window:CreateTab("Misc", 6034509993)
+local Section001 = Misc:CreateSection("Misc")
+	local Button = Misc:CreateButton({
    		Name = "Infinite Yield | idk",
    		Callback = function()
    			repeat wait() until game:IsLoaded()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
    		end,
 	})
-	local Button = Tab2:CreateButton({
+	local Button = Misc:CreateButton({
    		Name = "NukeVsCity Hub | idk",
    		Callback = function()
    			repeat wait() until game:IsLoaded()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader", true))()
    		end,
 	})
-	local Toggle000 = Tab2:CreateToggle({
+	local Toggle000 = Misc:CreateToggle({
 		Name = "Infinite Yield Auto Execute | idk",
 		CurrentValue = false,
 		Flag = "Toggle000",
@@ -163,7 +163,7 @@ local Section001 = Tab2:CreateSection("Misc")
 			end
 		end,
 	})
-	local Toggle001 = Tab2:CreateToggle({
+	local Toggle001 = Misc:CreateToggle({
 		Name = "NukeVsCity Hub Auto Execute| idk",
 		CurrentValue = false,
 		Flag = "Toggle001",
@@ -173,3 +173,5 @@ local Section001 = Tab2:CreateSection("Misc")
 			end
 		end,
 	})
+	local Label = Misc:CreateLabel("Label Example")
+	local Paragraph = Misc:CreateParagraph({Title = "Paragraph Example", Content = "Paragraph Example"})
