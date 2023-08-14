@@ -1,5 +1,7 @@
 repeat wait() until game:IsLoaded() 
 getgenv().YHK = "xVah*#96sg6^3oEu0"
+
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    	
@@ -66,20 +68,67 @@ local Section = Tab:CreateSection("Dupe Scripts")
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/solexz/rbx-scripts/main/solexafs.lua"))()	
    		end,
 	})
-		
-local Tab2 = Window:CreateTab("Misc", 6034509993)
-local Section2 = Tab2:CreateSection("Misc")
-	local Button = Tab2:CreateButton({
+
+
+local Tab2 = Window:CreateTab("Auto Execute", 6034509993)
+local Section = Tab2:CreateSection("Auto Execute Toggles - *Will re-xecute script when toggled on")
+	local Toggle = Tab2:CreateToggle({
+		Name = "Yuto Hub | yuteaz",
+		CurrentValue = false,
+		Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Callback = function(Value)
+			if Value then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Binintrozza/yutv2e/main/afss"))()
+   				wait()
+   				game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("ScreenGui"):WaitForChild("Frame"):WaitForChild("ImageLabel"):WaitForChild("ImageLabel"):WaitForChild("type key"):WaitForChild("TextBox").Text = getgenv().YHK
+			end
+		end,
+	})
+	local Toggle2 = Tab2:CreateToggle({
+		Name = "Badware | collorem",
+		CurrentValue = false,
+		Flag = "Toggle2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Callback = function(Value)
+			if Value then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Dupe/AFSim", true))()
+			end
+		end,
+	})
+
+
+local Tab3 = Window:CreateTab("Misc", 6034509993)
+local Section2 = Tab3:CreateSection("Misc")
+	local Button = Tab3:CreateButton({
    		Name = "Infinite Yield | idk",
    		Callback = function()
    			repeat wait() until game:IsLoaded()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
    		end,
 	})
-	local Button2 = Tab2:CreateButton({
+	local Button2 = Tab3:CreateButton({
    		Name = "NukeVsCity Hub | idk",
    		Callback = function()
    			repeat wait() until game:IsLoaded()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader", true))()
    		end,
+	})
+	local Toggle = Tab3:CreateToggle({
+		Name = "Infinite Yield Auto Execute | idk",
+		CurrentValue = false,
+		Flag = "Toggle3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Callback = function(Value)
+			if Value then
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+			end
+		end,
+	})
+	local Toggle2 = Tab3:CreateToggle({
+		Name = "NukeVsCity Hub Auto Execute| idk",
+		CurrentValue = false,
+		Flag = "Toggle4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Callback = function(Value)
+			if Value then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader", true))()
+			end
+		end,
 	})
