@@ -1,4 +1,5 @@
 repeat wait() until game:IsLoaded()
+print("loaded")
 local success, error = pcall(function ()
 	game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Loading", 1).Main.Bar.Percentage.Name = "Percentage"
 end)
