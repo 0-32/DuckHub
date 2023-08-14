@@ -81,7 +81,7 @@ local Section1 = Game:CreateSection("Dupe Scripts")
 
 
 local AutoE = Window:CreateTab("Auto Execute", 6034509993)
-local Section00 = AutoE1:CreateSection("Auto Execute Toggles - *Will re-execute script when toggled on")
+local Section00 = AutoE:CreateSection("Auto Execute Toggles - *Will re-execute script when toggled on")
 	local Toggle00 = AutoE:CreateToggle({
 		Name = "Yuto Hub | yuteaz",
 		CurrentValue = false,
