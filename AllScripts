@@ -4,6 +4,7 @@ local success, error = pcall(function ()
 end)
 if success then
 	print("success")
+	tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d"))
 	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")) > 9
 end
 getgenv().YHK = "xVah*#96sg6^3oEu0"
