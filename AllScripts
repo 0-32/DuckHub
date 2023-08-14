@@ -76,9 +76,12 @@ local Section = Tab:CreateSection("Dupe Scripts")
 	})
 
 
+
+
+
 local Tab2 = Window:CreateTab("Auto Execute", 6034509993)
 local Section = Tab2:CreateSection("Auto Execute Toggles - *Will re-execute script when toggled on")
-	local Toggle = Tab2:CreateToggle({
+	local Toggle0 = Tab2:CreateToggle({
 		Name = "Yuto Hub | yuteaz",
 		CurrentValue = false,
 		Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -90,48 +93,81 @@ local Section = Tab2:CreateSection("Auto Execute Toggles - *Will re-execute scri
 			end
 		end,
 	})
-	local Toggle2 = Tab2:CreateToggle({
+	local Toggle1 = Tab2:CreateToggle({
 		Name = "Badware | collorem",
 		CurrentValue = false,
-		Flag = "Toggle2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 		Callback = function(Value)
 			if Value then
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Dupe/AFSim", true))()
 			end
 		end,
 	})
+	local Toggle2 = Tab2:CreateToggle({
+		Name = "Platinum Hub | drazox1732",
+		CurrentValue = false,
+		Flag = "Toggle2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Callback = function(Value)
+			if Value then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Loader/main/PlatiniumLoader"))()	
+			end
+		end,
+	})
+	local Toggle3 = Tab2:CreateToggle({
+		Name = "Platinum Hub | drazox1732",
+		CurrentValue = false,
+		Flag = "Toggle3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Callback = function(Value)
+			if Value then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Loader/main/PlatiniumLoader"))()	
+			end
+		end,
+	})
+	local Toggle4 = Tab2:CreateToggle({
+		Name = "Sky Hub | ",
+		CurrentValue = false,
+		Flag = "Toggle4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Callback = function(Value)
+			if Value then
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua'))();	
+			end
+		end,
+	})
+
+
+
 
 
 local Tab3 = Window:CreateTab("Misc", 6034509993)
 local Section2 = Tab3:CreateSection("Misc")
-	local Button = Tab3:CreateButton({
+	local Button00 = Tab3:CreateButton({
    		Name = "Infinite Yield | idk",
    		Callback = function()
    			repeat wait() until game:IsLoaded()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
    		end,
 	})
-	local Button2 = Tab3:CreateButton({
+	local Button01 = Tab3:CreateButton({
    		Name = "NukeVsCity Hub | idk",
    		Callback = function()
    			repeat wait() until game:IsLoaded()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader", true))()
    		end,
 	})
-	local Toggle = Tab3:CreateToggle({
+	local Toggle00 = Tab3:CreateToggle({
 		Name = "Infinite Yield Auto Execute | idk",
 		CurrentValue = false,
-		Flag = "Toggle3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Flag = "Toggle00", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 		Callback = function(Value)
 			if Value then
 				loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 			end
 		end,
 	})
-	local Toggle2 = Tab3:CreateToggle({
+	local Toggle01 = Tab3:CreateToggle({
 		Name = "NukeVsCity Hub Auto Execute| idk",
 		CurrentValue = false,
-		Flag = "Toggle4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Flag = "Toggle01, -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 		Callback = function(Value)
 			if Value then
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader", true))()
