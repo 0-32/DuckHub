@@ -1,9 +1,9 @@
 repeat wait() until game:IsLoaded()
-wait(1)
+wait(3)
 local success, errormessage = pcall(function ()
 	game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Name = "Percentage"
 end)
-print("2")
+print("2", game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Name)
 if success then
 	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Loading").Main.Bar.Percentage.Text,"%d")) >= 90
 end
