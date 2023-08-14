@@ -1,13 +1,13 @@
 repeat wait() until game:IsLoaded()
 local success, error = pcall(function ()
-	game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Loading", 2).Main.Bar.Percentage.Visible = false
+	game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Loading", 4).Main.Bar.Percentage.Visible = false
 end)
 if success then
 	print("success")
 	print(tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")))
 	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")) >= 9
 end
-getgenv().YHK = "xVah*#96sg6^3oEu0"
+getgenv().YHK = "TNn&53#6%FtM82l^w$"
 
 wait(2)
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
@@ -81,7 +81,8 @@ local Section1 = Game:CreateSection("Dupe Scripts")
 
 
 local AutoE = Window:CreateTab("Auto Execute", 6034509993)
-local Section00 = AutoE:CreateSection("Auto Execute Toggles - *Will re-execute script when toggled on")
+local Label = AutoE:CreateLabel("Toggling on Auto Execute will automatically execute the script on join")
+local Section00 = AutoE:CreateSection("Script Hub Toggles")
 	local Toggle00 = AutoE:CreateToggle({
 		Name = "Yuto Hub | yuteaz",
 		CurrentValue = false,
@@ -138,7 +139,7 @@ local Section01 = AutoE:CreateSection("Dupe Scripts - Auto Execute")
 	})
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local Misc = Window:CreateTab("Misc", 6034509993)
-local Section001 = Misc:CreateSection("Misc")
+local Section001 = Misc:CreateSection("Misc Hubs")
 	local Button = Misc:CreateButton({
    		Name = "Infinite Yield | idk",
    		Callback = function()
@@ -173,5 +174,12 @@ local Section001 = Misc:CreateSection("Misc")
 			end
 		end,
 	})
-	local Label = Misc:CreateLabel("Label Example")
-	local Paragraph = Misc:CreateParagraph({Title = "Paragraph Example", Content = "Paragraph Example"})
+	local Section001 = Misc:CreateSection("Misc")
+	local Button = Misc:CreateButton({
+		Name = "Reload Hub",
+		Callback = function()
+			repeat wait() until game:IsLoaded()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/0-32/DuckHub/main/AllScripts"))()
+		end,
+ })
+	local Paragraph = Misc:CreateParagraph({Title = "Auto Execute", Content = "Paragraph Example"})
