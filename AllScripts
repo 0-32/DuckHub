@@ -1,11 +1,13 @@
 repeat wait() until game:IsLoaded()
-wait(3)
-local success, errormessage = pcall(function ()
-	game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Name = "Percentage"
+local success, error = pcall(function ()
+	game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Loading").Main.Bar.Percentage.Name = "Percentage"
 end)
-print("2", game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Name)
 if success then
-	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Loading").Main.Bar.Percentage.Text,"%d")) >= 90
+	print("success")
+	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")) >= 9
+end
+if error then
+	print("error")
 end
 getgenv().YHK = "xVah*#96sg6^3oEu0"
 
@@ -19,7 +21,7 @@ local Window = Rayfield:CreateWindow({
    	ConfigurationSaving = {
       Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
+      FileName = "Duck Hub"
    	},
    	Discord = {
       Enabled = false,
@@ -140,3 +142,4 @@ local Section2 = Tab3:CreateSection("Misc")
 			end
 		end,
 	})
+	
