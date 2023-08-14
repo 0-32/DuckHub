@@ -96,26 +96,16 @@ local Section = Tab2:CreateSection("Auto Execute Toggles - *Will re-execute scri
 		end,
 	})
 	local Toggle1 = Tab2:CreateToggle({
-		Name = "Badware | collorem",
-		CurrentValue = false,
-		Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-		Callback = function(Value)
-			if Value then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Dupe/AFSim", true))()
-			end
-		end,
-	})
-	local Toggle2 = Tab2:CreateToggle({
-		Name = "Platinum Hub | drazox1732",
+		Name = "Sky Hub | ",
 		CurrentValue = false,
 		Flag = "Toggle2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 		Callback = function(Value)
 			if Value then
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Loader/main/PlatiniumLoader"))()	
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua'))();
 			end
 		end,
 	})
-	local Toggle3 = Tab2:CreateToggle({
+	local Toggle2 = Tab2:CreateToggle({
 		Name = "Platinum Hub | drazox1732",
 		CurrentValue = false,
 		Flag = "Toggle3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -125,13 +115,25 @@ local Section = Tab2:CreateSection("Auto Execute Toggles - *Will re-execute scri
 			end
 		end,
 	})
-	local Toggle4 = Tab2:CreateToggle({
-		Name = "Sky Hub | ",
+
+local Section = Tab2:CreateSection("Dupe Scripts - Auto Execute")
+	local Toggle3 = Tab2:CreateToggle({
+		Name = "Badware | collorem",
 		CurrentValue = false,
 		Flag = "Toggle4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 		Callback = function(Value)
 			if Value then
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua'))();	
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Dupe/AFSim", true))()	
+			end
+		end,
+	})
+	local Toggle4 = Tab2:CreateToggle({
+		Name = "Scriptagens | solex",
+		CurrentValue = false,
+		Flag = "Toggle4", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Callback = function(Value)
+			if Value then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/solexz/rbx-scripts/main/solexafs.lua"))()	
 			end
 		end,
 	})
@@ -169,7 +171,7 @@ local Section2 = Tab3:CreateSection("Misc")
 	local Toggle01 = Tab3:CreateToggle({
 		Name = "NukeVsCity Hub Auto Execute| idk",
 		CurrentValue = false,
-		Flag = "Toggle01, -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+		Flag = "Toggle01", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 		Callback = function(Value)
 			if Value then
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader", true))()
