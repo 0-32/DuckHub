@@ -9,10 +9,10 @@ if success then
 end
 getgenv().YHK = "TNn&53#6%FtM82l^w$"
 
-function teleportPlyr(CFramePlace)
+function teleportPlyr(pos)
     local plyer = game.Players.LocalPlayer
     if plyer.Character then
-        plyer.Character.HumanoidRootPart.CFrame = CFramePlace
+        plyer.Character.HumanoidRootPart.CFrame = pos
     end
 end
 
@@ -211,7 +211,7 @@ local Toggle002 = Misc:CreateToggle({
 	Flag = "Toggle003",
 	Callback = function(Value)
 		if Value then
-			teleportPlyr(workspace.Worlds.TimeChamber.Passive.RootPart)
+			teleportPlyr(workspace.Worlds.TimeChamber.Passive.RootPart.CFrame)
 		end
 	end,
 })
