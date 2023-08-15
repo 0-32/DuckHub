@@ -45,7 +45,7 @@ KeySettings = {
 }})
 
 local function autoHide()
-	game:GetService("CoreGui").Rayfield.Main.Transparency = "1" or 1
+	game:GetService("CoreGui").Rayfield.Main.BackgroundTransparency = "1" or 1
 	for i, v in pairs(game:GetService("CoreGui").Rayfield.Main:GetChildren("Frame")) do
 		if v.Name ~= "Topbar" then
 			v.Visible = false
