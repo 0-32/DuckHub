@@ -9,6 +9,13 @@ if success then
 end
 getgenv().YHK = "TNn&53#6%FtM82l^w$"
 
+function teleportPlyr(CFramePlace)
+    local plyer = game.Players.LocalPlayer
+    if plyer.Character then
+        plyer.Character.HumanoidRootPart.CFrame = CFramePlace
+    end
+end
+
 wait(2)
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
@@ -38,7 +45,7 @@ KeySettings = {
 }})
 
 local function autoHide()
-	game:GetService("CoreGui").Rayfield.Main.Visible = false
+	game:GetService("CoreGui").Rayfield.Main.Transparency = "1" or 1
 	for i, v in pairs(game:GetService("CoreGui").Rayfield.Main:GetChildren("Frame")) do
 		if v.Name ~= "Topbar" then
 			v.Visible = false
@@ -186,10 +193,14 @@ local Section001 = Misc:CreateSection("Misc Hubs")
 		end,
 	})
 	local Section001 = Misc:CreateSection("Misc")
-	local Button = Misc:CreateButton({
+	local Toggle002 = Misc:CreateToggle({
 		Name = "Auto Hide Hub",
-		Callback = function()
-			autoHide()
+		CurrentValue = false,
+		Flag = "Toggle002",
+		Callback = function(Value)
+			if Value then
+				autoHide()
+			end
 		end,
 	 })
 	 local Button = Misc:CreateButton({
@@ -199,4 +210,15 @@ local Section001 = Misc:CreateSection("Misc Hubs")
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/0-32/DuckHub/main/AllScripts"))()
 		end,
 	 })
-	local Paragraph = Misc:CreateParagraph({Title = "Auto Execute", Content = "Paragraph Example"})
+	 local Toggle003 = Misc:CreateToggle({
+		Name = "Auto TP to Passive Machine",
+		CurrentValue = false,
+		Flag = "Toggle003",
+		Callback = function(Value)
+			if Value then
+				teleportPlyr(-4980.6167, -192.087692, -6154.1958, -0.499959469, 0, -0.866048813, 0, 1, 0, 0.866048813, 0, -0.499959469)
+			end
+		end,
+	})
+	--local Paragraph = Misc:CreateParagraph({Title = "Auto Execute", Content = "Paragraph Example"})
+	
