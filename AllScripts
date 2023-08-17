@@ -7,7 +7,7 @@ if success then
 	print(tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")))
 	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")) >= 9
 end
-getgenv().YHK = "2V^A6UA7i6uq9MfgP"
+getgenv().YHK = "Oo3kRqg^3$51R4Yw&"
 
 function teleportPlyr(pos)
     local plyer = game.Players.LocalPlayer
@@ -207,8 +207,8 @@ local Toggle002 = Misc:CreateToggle({
 			autoHide()
 		end
 	end,
-	})
-	local Toggle003 = Misc:CreateToggle({
+})
+local Toggle003 = Misc:CreateToggle({
 	Name = "Auto TP to Passive Machine",
 	CurrentValue = false,
 	Flag = "Toggle003",
@@ -216,6 +216,13 @@ local Toggle002 = Misc:CreateToggle({
 		if Value then
 			teleportPlyr(workspace.Worlds.TimeChamber.Passive.RootPart.CFrame)
 		end
+	end,
+})
+local Button = Misc:CreateButton({
+	Name = "Reload UI",
+	Callback = function()
+		repeat wait() until game:IsLoaded()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/0-32/DuckHub/main/AllScripts"))()
 	end,
 })
 --local Paragraph = Misc:CreateParagraph({Title = "Auto Execute", Content = "Paragraph Example"})
