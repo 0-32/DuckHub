@@ -7,7 +7,7 @@ if success then
 	print(tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")))
 	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")) >= 9
 end
-getgenv().YHK = "Oo3kRqg^3$51R4Yw&"
+getgenv().YHK = "eu^vU5Fae*J*1F&GP3"
 
 function teleportPlyr(pos)
     local plyer = game.Players.LocalPlayer
