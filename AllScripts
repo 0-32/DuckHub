@@ -81,6 +81,12 @@ local Button = Game:CreateButton({
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/SKOIXLL/RIVERHUB-SKYHUB/main/WL.lua'))();
 	end,
 })
+local Button = Game:CreateButton({
+	Name = "Banana H;ub | roge",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/temporynewkeysystem.lua"))()
+	end,
+})
 		
 local Section1 = Game:CreateSection("Dupe Scripts")
 local Button = Game:CreateButton({
@@ -136,22 +142,32 @@ local Toggle02 = AutoE:CreateToggle({
 		end
 	end,
 })
-
-local Section02 = AutoE:CreateSection("Dupe Scripts - Auto Execute")
 local Toggle03 = AutoE:CreateToggle({
-	Name = "Badware | collorem",
+	Name = "Banana Hub | roge",
 	CurrentValue = false,
 	Flag = "Toggle03",
+	Callback = function(Value)
+		if Value then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/temporynewkeysystem.lua"))()	
+		end
+	end,
+})
+
+local Section02 = AutoE:CreateSection("Dupe Scripts - Auto Execute")
+local Toggle04 = AutoE:CreateToggle({
+	Name = "Badware | collorem",
+	CurrentValue = false,
+	Flag = "Toggle04",
 	Callback = function(Value)
 		if Value then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Dupe/AFSim", true))()	
 		end
 	end,
 })
-local Toggle04 = AutoE:CreateToggle({
+local Toggle05 = AutoE:CreateToggle({
 	Name = "Scriptagens | solex",
 	CurrentValue = false,
-	Flag = "Toggle04",
+	Flag = "Toggle05",
 	Callback = function(Value)
 		if Value then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/solexz/rbx-scripts/main/solexafs.lua"))()	
