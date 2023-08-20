@@ -82,7 +82,7 @@ local Button = Game:CreateButton({
 	end,
 })
 local Button = Game:CreateButton({
-	Name = "Banana H;ub | roge",
+	Name = "Banana Hub | roge",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/diepedyt/bui/main/temporynewkeysystem.lua"))()
 	end,
