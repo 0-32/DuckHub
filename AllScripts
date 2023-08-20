@@ -56,7 +56,6 @@ local function autoHide()
 		task.wait()
 	end
 end
-wait(1)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 local Game = Window:CreateTab("AFS", 6034848748)
@@ -117,7 +116,6 @@ local Toggle00 = AutoE:CreateToggle({
 		end
 	end,
 })
-wait(.2)
 local Toggle01 = AutoE:CreateToggle({
 	Name = "Sky Hub | skyloland",
 	CurrentValue = false,
@@ -128,7 +126,6 @@ local Toggle01 = AutoE:CreateToggle({
 		end
 	end,
 })
-wait(.2)
 local Toggle02 = AutoE:CreateToggle({
 	Name = "Platinum Hub | drazox1732",
 	CurrentValue = false,
@@ -151,7 +148,6 @@ local Toggle03 = AutoE:CreateToggle({
 		end
 	end,
 })
-wait(.2)
 local Toggle04 = AutoE:CreateToggle({
 	Name = "Scriptagens | solex",
 	CurrentValue = false,
@@ -162,7 +158,6 @@ local Toggle04 = AutoE:CreateToggle({
 		end
 	end,
 })
-wait()
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 local Misc = Window:CreateTab("Misc", 6034509993)
