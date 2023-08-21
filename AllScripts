@@ -3,14 +3,14 @@ local success, error = pcall(function ()
 	game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Loading", 4).Main.Bar.Percentage.Visible = false
 end)
 if success then
-	print("success")
-	print(tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")))
+	--print("success")
+	--print(tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")))
 	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")) >= 9
 end
 getgenv().YHK = "a2xtr3@N0WU3i9#P"
 
 function teleportPlyr(pos)
-    local plyer = game.Players.LocalPlayer
+    local plyer = game:GetSErvice("Players"):WaitForChild("LocalPlayer")
     if plyer.Character then
         plyer.Character.HumanoidRootPart.CFrame = pos
     end
@@ -22,7 +22,7 @@ local Window = Rayfield:CreateWindow({
    	
 Name = "Duck Hub - "..tostring(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name),
 LoadingTitle = "Duck Hub",
-LoadingSubtitle = "- Version | 1.0.0",
+LoadingSubtitle = "- " ..tostring(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .."| 1.0.0",
 ConfigurationSaving = {
 	Enabled = true,
 	FolderName = "Duck Hub", -- Create a custom folder for your hub/game
