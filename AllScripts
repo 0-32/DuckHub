@@ -22,7 +22,7 @@ local Window = Rayfield:CreateWindow({
    	
 Name = "Duck Hub - "..tostring(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name),
 LoadingTitle = "Duck Hub",
-LoadingSubtitle = "- " ..tostring(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .."| 1.0.0",
+LoadingSubtitle = "- " ..tostring(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name) .." | V 1.0.0",
 ConfigurationSaving = {
 	Enabled = true,
 	FolderName = "Duck Hub", -- Create a custom folder for your hub/game
