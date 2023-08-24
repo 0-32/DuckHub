@@ -18,6 +18,7 @@ function teleportPlyr(pos)
 end
 
 wait(2)
+print("startUI")
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    	
@@ -58,7 +59,7 @@ local function autoHide()
 	end
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+print("loading tabs')
 local Game = Window:CreateTab("AFS", 6034848748)
 
 local Section0 = Game:CreateSection("Script Hubs")
