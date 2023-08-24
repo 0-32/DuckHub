@@ -27,7 +27,7 @@ LoadingTitle = "Duck Hub",
 LoadingSubtitle = "- " ..tostring(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name) .." | V 1.0.0",
 ConfigurationSaving = {
 	Enabled = true,
-	FolderName = "DuckHub, -- Create a custom folder for your hub/game
+	FolderName = "DuckHub", -- Create a custom folder for your hub/game
 	FileName = "DuckHub"
 },
 Discord = {
