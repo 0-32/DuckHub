@@ -59,7 +59,7 @@ local function autoHide()
 	end
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-print("loading tabs')
+print("loading tabs")
 local Game = Window:CreateTab("AFS", 6034848748)
 
 local Section0 = Game:CreateSection("Script Hubs")
