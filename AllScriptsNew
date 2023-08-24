@@ -10,13 +10,6 @@ if success then
 end
 getgenv().YHK = "Yutohubv2bca86087266a08f21d8650da582703d39093d1e3f19448cf1eb5e439099bf68b"
 
-function teleportPlyr(pos)
-    local plyer = game:GetSErvice("Players"):WaitForChild("LocalPlayer")
-    if plyer.Character then
-        plyer.Character.HumanoidRootPart.CFrame = pos
-    end
-end
-
 wait(2)
 print("startUI")
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
@@ -57,6 +50,13 @@ local function autoHide()
 		end
 		task.wait()
 	end
+end
+
+function teleportPlyr(pos)
+    local plyer = game:GetSErvice("Players"):WaitForChild("LocalPlayer")
+    if plyer.Character then
+        plyer.Character.HumanoidRootPart.CFrame = pos
+    end
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 print("loading tabs")
@@ -232,7 +232,7 @@ local Toggle003 = Misc:CreateToggle({
 	Flag = "Toggle003",
 	Callback = function(Value)
 		if Value then
-			teleportPlyr(workspace.Worlds.TimeChamber.Passive.RootPart.CFrame)
+			teleportPlyr(workspace.Worlds.TimeChamber.Passive.OrbCenter.CFrame)
 		end
 	end,
 })
