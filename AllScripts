@@ -7,7 +7,7 @@ if success then
 	--print(tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")))
 	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")) >= 9
 end
-getgenv().YHK = "a2xtr3@N0WU3i9#P"
+getgenv().YHK = "Yutohubv2bca86087266a08f21d8650da582703d39093d1e3f19448cf1eb5e439099bf68b"
 
 function teleportPlyr(pos)
     local plyer = game:GetSErvice("Players"):WaitForChild("LocalPlayer")
