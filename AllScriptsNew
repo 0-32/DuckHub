@@ -8,7 +8,7 @@ if success then
 	--print(tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")))
 	repeat wait() until tonumber(string.match(game:GetService("Players").LocalPlayer.PlayerGui.Loading.Main.Bar.Percentage.Text,"%d")) >= 9
 end
-getgenv().YHK = "Yutohubv2bca86087266a08f21d8650da582703d39093d1e3f19448cf1eb5e439099bf68b"
+getgenv().YHK = "yutohubv28e31f5199087596f6d3de30e619dfd0072e54e440af7a9175da9d02a5d048e58"
 
 wait(2)
 print("startUI")
@@ -53,7 +53,7 @@ local function autoHide()
 end
 
 function teleportPlyr(pos)
-    local plyer = game:GetSErvice("Players"):WaitForChild("LocalPlayer")
+    local plyer = game:GetService("Players").LocalPlayer
     if plyer.Character then
         plyer.Character.HumanoidRootPart.CFrame = pos
     end
